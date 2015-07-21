@@ -103,6 +103,9 @@ bool PuntoEnPConvexo(poligono P, punto p){
     return true;
 }
 
+//AREA DE UN POLIGONO
+//PRODUCTO CRUZ SOBRE TODO PAR DE PUNTOS ORDENADOS SOBRE 2
+
 int main(){
     return 0;
 }
