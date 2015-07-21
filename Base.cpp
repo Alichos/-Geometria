@@ -92,6 +92,7 @@ int ManoDerecha(const punto & o,
     return (cruz < 0)? -1 : 1;
 }
 
+//PUNTO DENTRO DE UN POLIGONO CONVEXO
 bool PuntoEnPConvexo(poligono P, punto p){
     int dir = ManoDerecha(P[0],P[1],p);
     int tam = P.size();
