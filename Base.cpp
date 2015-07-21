@@ -63,6 +63,12 @@ punto Opuesto(const punto & v){
     return punto(-v.x, -v.y);
 }
 
+//ANGULO ENTRE PUNTOS
+double AnguloEntre(const punto & v, const punto & w){
+    double r = ( acos( Dot(v,w) / (Magnitud(v) * Magnitud(w)) ) );
+    return RadAGrados(r);
+}
+
 bool igual(Coord a, Coord b){
     return abs(a - b) < ERR;
 }
