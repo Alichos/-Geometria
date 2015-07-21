@@ -17,6 +17,9 @@ struct punto{
     }
 };
 
+typedef vector<punto> poligono;
+//Dejar a P1 al final
+
 double GradosARad(double grados){
     return (grados * M_PI) / 180;
 }
@@ -78,6 +81,9 @@ bool igual(Coord a, Coord b){
     return abs(a - b) < ERR;
 }
 
+//DENTRO 1
+//FUERA -1
+//COLINEAL 0
 int ManoDerecha(const punto & o,
                 const punto & v,
                 const punto & w){
