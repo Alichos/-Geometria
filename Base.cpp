@@ -53,7 +53,7 @@ punto Rotar(const punto & p, double g){
 }
 
 //ROTA UN PUNTO CON RESPECTO A OTRO PUNTO
-punto Trasnladar(const punto & o, const punto & p){
+punto Transladar(const punto & o, const punto & p){
     return punto(p.x - o.x,
                  p.y - o.y);
 }
@@ -78,7 +78,13 @@ bool igual(Coord a, Coord b){
     return abs(a - b) < ERR;
 }
 
-
+int ManoDerecha(const punto & o,
+                const punto & v,
+                const punto & w){
+    double cruz = Cruz(Transladar(o,v),Transladar(o,w));
+    if(igual(cruz , 0)) return 0;
+    return (cruz < 0)? -1 : 1;
+}
 
 int main(){
     return 0;
