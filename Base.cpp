@@ -92,6 +92,16 @@ int ManoDerecha(const punto & o,
     return (cruz < 0)? -1 : 1;
 }
 
+bool PuntoEnPConvexo(poligono P, punto p){
+    int dir = ManoDerecha(P[0],P[1],p);
+    int tam = P.size();
+    for(int i = 1; i <= tam; i++){
+        if(abs(ManoDerecha(P[i],P[i + 1],p) - dir) == 2)
+            return false;
+    }
+    return true;
+}
+
 int main(){
     return 0;
 }
