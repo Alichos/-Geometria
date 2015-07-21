@@ -69,9 +69,15 @@ double AnguloEntre(const punto & v, const punto & w){
     return RadAGrados(r);
 }
 
+//CAMBIAR TAMAÑO DE UN VECTOR
+punto Escalar(const punto & v, double s){
+    return punto(v.x * s, v.y * s);
+}
+
 bool igual(Coord a, Coord b){
     return abs(a - b) < ERR;
 }
+
 
 
 int main(){
