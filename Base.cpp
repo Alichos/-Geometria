@@ -95,7 +95,7 @@ int ManoDerecha(const punto & o,
 //PUNTO DENTRO DE UN POLIGONO CONVEXO
 bool PuntoEnPConvexo(poligono P, punto p){
     int dir = ManoDerecha(P[0],P[1],p);
-    int tam = P.size();
+    int tam = P.size() - 1;
     for(int i = 1; i <= tam; i++){
         if(abs(ManoDerecha(P[i],P[i + 1],p) - dir) == 2)
             return false;
